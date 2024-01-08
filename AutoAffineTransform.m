@@ -1,4 +1,4 @@
-function [OI,OH,tforms] = AutoAffineTransform(I,H)
+function [OI,OH,tforms] = AutoAffineTransform(I,H,dp)
 % Function that xy shifts and rescales images I(:,:,1:end-1) to match the
 % I(:,:,end) image
 % Inputs:
@@ -6,6 +6,7 @@ function [OI,OH,tforms] = AutoAffineTransform(I,H)
 %       range 
 %   H - input holograms (will be shifted according to affine transforms 
 %       found for I)
+%   dp - if > 0 - show matching results
 % Outputs:
 %   OI - xy shifted and and rescaled reconstructions to match the 
 %        I(:,:,end)
@@ -59,13 +60,15 @@ for tt = 1:size(I,3)-1
     
     inlierDistorted = matchedDistorted(inlierIdx,:);
     inlierOriginal = matchedOriginal(inlierIdx,:);
-    % Display matching point pairs used in the computation of the transformation
-    figure;
-    showMatchedFeatures(original,distorted,inlierOriginal,inlierDistorted);
-    title(['Matching points between image no. ', num2str(tt),...
-        ' and image no. ',  num2str(size(I,3))]);
-    legend('Points in last image', 'Points in n-th image');
-    
+    if dp > 0
+        % Display matching point pairs used in the computation of the transformation
+        figure;
+        showMatchedFeatures(original,distorted,inlierOriginal,inlierDistorted);
+        title(['Matching points between image no. ', num2str(tt),...
+            ' and image no. ',  num2str(size(I,3))]);
+        legend('Points in last image', 'Points in n-th image');
+    end
+
     Roriginal = imref2d(size(original));
     OI(:,:,tt) = imwarp(distorted,tform,'OutputView',Roriginal);
     OH(:,:,tt) = imwarp(H(:,:,tt),tform,'OutputView',Roriginal);
