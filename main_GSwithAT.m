@@ -1,5 +1,10 @@
 %% Code for performing GS phase retrieval aided wth automatic affine
 % transform in digital in-line holographic microscopy
+% 
+% Required toolboxes:
+%   'Image Processing Toolbox'
+%   'Computer Vision Toolbox'
+%   'Parallel Computing Toolbox' (optionally)
 %
 % Created by:
 %   Mikołaj Rogalski,
@@ -7,7 +12,7 @@
 %   Institute of Micromechanics and Photonics,
 %   Warsaw University of Technology, 02-525 Warsaw, Poland
 %
-% Last modified: 05.01.2024
+% Last modified: 08.01.2024
 
 %% Input parameters
 clear; close all; clc
