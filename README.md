@@ -8,7 +8,7 @@ Firstly, each in-line hologram is reconstructed (propagated to the object plane)
 After this preprocessing step, Gerchberg-Saxton (GS) multi-height algorithm is performed to retrieve object phase with minimized twin image noise comparing to single-frame angular spectrum backpropagation (fig. below)  <br> <br>
 ![](https://github.com/MRogalski96/GS_AT/blob/main/github_images/ASGS_phase.png) <br> <br>
 # Cite as
-Rosen, J., Alford, S., Allan, B. et al, "Roadmap on computational methods in optical imaging and holography [invited]," Appl. Phys. B 130, 166 (2024). https://doi.org/10.1007/s00340-024-08280-3
+Affine transform-based twin-image suppression for in-line lensless digital holographic microscopy (M. J. Marzejon, M. Rogalski, M. Trusiak) in Rosen, J., Alford, S., Allan, B., et al, "Roadmap on computational methods in optical imaging and holography [invited]," Appl. Phys. B 130, 166 (2024). https://doi.org/10.1007/s00340-024-08280-3
 
 # Created by
 Mikołaj Rogalski, <br>
