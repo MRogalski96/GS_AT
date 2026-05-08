@@ -10,8 +10,11 @@ After this preprocessing step, Gerchberg-Saxton (GS) multi-height algorithm is p
 # Cite as
 Affine transform-based twin-image suppression for in-line lensless digital holographic microscopy (M. J. Marzejon, M. Rogalski, M. Trusiak) in Rosen, J., Alford, S., Allan, B., et al, "Roadmap on computational methods in optical imaging and holography [invited]," Appl. Phys. B 130, 166 (2024). https://doi.org/10.1007/s00340-024-08280-3
 
+# Funding
+The research was funded by National Science Center, Poland (2020/39/D/ST7/03236)
+
 # Created by
 Mikołaj Rogalski, <br>
-mikolaj.rogalski.dokt@pw.edu.pl <br>
+mikolaj.rogalski@pw.edu.pl <br>
 Institute of Micromechanics and Photonics, <br>
 Warsaw University of Technology, Poland <br>
